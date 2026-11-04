@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ ! -f "password" ]; then
+  echo "File 'password' is not found"
+  exit 1
+fi
+
+echo "Users with /bin/bash CLI: "
+grep "/bin/bash" password | cut -d: -f1
